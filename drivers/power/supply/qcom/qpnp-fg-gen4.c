@@ -732,7 +732,7 @@ static int fg_gen4_get_nominal_capacity(struct fg_gen4_chip *chip,
 		return rc;
 	}
 
-	*nom_cap_uah = (int)(buf[0] | buf[1] << 8) * 1000;
+	*nom_cap_uah = 5000*1000;
 	fg_dbg(fg, FG_CAP_LEARN, "nom_cap_uah: %lld\n", *nom_cap_uah);
 	return 0;
 }
